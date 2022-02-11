@@ -34,7 +34,11 @@ class _HomePageState extends State<HomePage> {
                   decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius:
-                          BorderRadius.vertical(bottom: Radius.circular(30))),
+                          BorderRadius.vertical(bottom: Radius.circular(30),),
+                    boxShadow: [
+                      BoxShadow(color: Colors.grey, blurRadius: 12.0),
+                    ],
+                  ),
                   padding: EdgeInsets.all(20.0),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,

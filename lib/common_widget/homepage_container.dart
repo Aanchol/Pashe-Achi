@@ -15,6 +15,9 @@ class HomePageContainer extends StatelessWidget {
         //borderRadius: BorderRadius.circular(100),
         shape: BoxShape.circle,
         color: color,
+        boxShadow: [
+          BoxShadow(color: Colors.black, blurRadius: 12.0),
+        ],
         gradient: LinearGradient(
           begin: Alignment.bottomRight,
             stops: [0.2,1.0],

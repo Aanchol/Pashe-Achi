@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'Pages/home_page.dart';
+import 'Pages/login_page.dart';
 import 'Pages/welcome_screen.dart';
 
 void main() {
@@ -15,7 +16,7 @@ class PasheAchiApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
 
       theme: ThemeData.light(),
-      home: WelcomeScreen(),
+      home: HomePage(),
     );
   }
 }
