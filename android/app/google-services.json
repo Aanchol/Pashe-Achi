@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "824133604119",
+    "project_id": "pashe-achi-5dc90",
+    "storage_bucket": "pashe-achi-5dc90.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:824133604119:android:551802aae5eeae76c19d52",
+        "android_client_info": {
+          "package_name": "com.mushfika.pashe_achi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "824133604119-belnuhb478oicavm7hfrcg674l2n3erj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCb334ylDjEMxDecTFUybaIw-T-AR0AGJU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "824133604119-belnuhb478oicavm7hfrcg674l2n3erj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
