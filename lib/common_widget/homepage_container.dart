@@ -12,7 +12,6 @@ class HomePageContainer extends StatelessWidget {
 
       margin: EdgeInsets.all(8),
       decoration: BoxDecoration(
-        //borderRadius: BorderRadius.circular(100),
         shape: BoxShape.circle,
         color: color,
         boxShadow: [

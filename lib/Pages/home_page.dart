@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:pashe_achi/Pages/pharmacy_order.dart';
+import 'package:pashe_achi/Pages/statictics.dart';
 import 'package:pashe_achi/common_widget/homepage_container.dart';
 import 'package:pashe_achi/common_widget/homepg_iconcontent.dart';
 import 'package:pashe_achi/common_widget/search_field.dart';
@@ -18,7 +20,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       backgroundColor: Colors.grey.shade100,
       appBar: AppBar(
-        title: Text('Pashe Achi'),
+        title: Text('Home'),
         centerTitle: true,
         leading: Icon(Icons.menu_outlined),
         backgroundColor: Colors.red.shade900,
@@ -92,21 +94,35 @@ class _HomePageState extends State<HomePage> {
             child: Row(
               children: [
                 Expanded(
-                  child: HomePageContainer(
-                    color: homepgContainColor,
-                    homepgContainerChild: HomepgIconContent(
-                      icon: FontAwesomeIcons.capsules,
-                      homepgLabel: "Pharmacy Order",
+                  child: InkWell(
+                    child: HomePageContainer(
+                      color: homepgContainColor,
+                      homepgContainerChild: HomepgIconContent(
+                        icon: FontAwesomeIcons.capsules,
+                        homepgLabel: "Pharmacy Order",
+                      ),
                     ),
+                    onTap: (){
+                      Navigator.push(context, MaterialPageRoute(builder: (context){
+                        return PharmacyPage();
+                      }));
+                    },
                   ),
                 ),
                 Expanded(
-                  child: HomePageContainer(
-                    color: homepgContainColor,
-                    homepgContainerChild: HomepgIconContent(
-                      icon: FontAwesomeIcons.chartBar,
-                      homepgLabel: "Statictics",
+                  child: InkWell(
+                    child: HomePageContainer(
+                      color: homepgContainColor,
+                      homepgContainerChild: HomepgIconContent(
+                        icon: FontAwesomeIcons.chartBar,
+                        homepgLabel: "Statictics",
+                      ),
                     ),
+                    onTap: (){
+                      Navigator.push(context, MaterialPageRoute(builder: (context){
+                        return Statictics();
+                      }));
+                    },
                   ),
                 ),
               ],
