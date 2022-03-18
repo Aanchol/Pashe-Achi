@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:pashe_achi/Pages/onboarding_screen.dart';
 import 'package:pashe_achi/Pages/welcome_screen.dart';
 
 import '../repository/pashe_achi_repository.dart';
@@ -24,7 +25,7 @@ class _SplashScreenState extends State<SplashScreen> {
             ()
         {
           Navigator.push(context, MaterialPageRoute(builder: (context) {
-            return WelcomeScreen();
+            return OnBoardingPage();
           })
           );
         });

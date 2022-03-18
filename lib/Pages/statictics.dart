@@ -60,11 +60,21 @@ class _StaticticsState extends State<Statictics> {
                       SizedBox(
                         height: 30,
                       ),
+                      Container(
+                        height: MediaQuery.of(context).size.height / 5,
+                        decoration: BoxDecoration(
+                          image: DecorationImage(
+                              image: AssetImage('assets/images/map.jpg')),
+                      ),
+                      ),
+                      SizedBox(
+                        height: 30,
+                      ),
                       provider.status == "success" ?Column(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       infoCard(
-                      color: Color(0xFF9bd7d5),
+                      color: Color(0xFFB7D9D7),
                       text1: "Deaths:",
                       totalNumber1: provider.covidInfo.deaths.toString(),
                       text2: "Today's Deaths:",
@@ -72,21 +82,21 @@ class _StaticticsState extends State<Statictics> {
 
                         ),
                       infoCard(
-                        color: Color(0xFF9bd7d5),
+                        color: Color(0xFFB7D9D7),
                           text1: "Cases:",
                           totalNumber1: provider.covidInfo.cases.toString(),
                           text2: "Today Cases:",
                           totalNumber2: provider.covidInfo.todayCases.toString(),
                       ),
                       infoCard(
-                        color: Color(0xFF9bd7d5),
+                        color: Color(0xFFB7D9D7),
                         text1: "Recovered:",
                         totalNumber1: provider.covidInfo.recovered.toString(),
                         text2: "Today Recovered:",
                         totalNumber2: provider.covidInfo.todayRecovered.toString(),
                       ),
                       infoCard(
-                        color: Color(0xFF9bd7d5),
+                        color: Color(0xFFB7D9D7),
                         text1: "Active:",
                         totalNumber1: provider.covidInfo.active.toString(),
                         text2: "Tests:",

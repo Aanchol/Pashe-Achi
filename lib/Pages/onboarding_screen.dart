@@ -9,22 +9,11 @@ class OnBoardingPage extends StatelessWidget {
 
   final List<PageViewModel> pages = [
     PageViewModel(
-        title: 'Connect With Everyone',
-        body: 'Here you can have whatever description you would like to have, you can type it all in here',
+        title: 'Wear a Mask',
+        body: 'Wear a properly fitted mask when physical distancing is not possible and in poorly ventilated settings.',
         footer: SizedBox(
           height: 45,
           width: 300,
-          child: ElevatedButton(
-            style: ElevatedButton.styleFrom(
-                primary: Colors.green,
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(20)
-                ),
-                elevation: 8
-            ),
-            onPressed: () {},
-            child: const Text("Let's Go", style: TextStyle(fontSize: 20)),
-          ),
         ),
         image: Center(
           child:  Image.asset('assets/images/wear_mask.png'),
@@ -37,22 +26,11 @@ class OnBoardingPage extends StatelessWidget {
         )
     ),
     PageViewModel(
-        title: 'Have Access Everywhere!',
-        body: 'Here you can have whatever description you would like to have, you can type it all in here',
+        title: 'Wash Your Hand',
+        body: 'Clean your hands frequently with alcohol-based hand rub or soap and water',
         footer: SizedBox(
           height: 45,
           width: 300,
-          child: ElevatedButton(
-            style: ElevatedButton.styleFrom(
-              // primary: Colors.red,
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(20)
-                ),
-                elevation: 8
-            ),
-            onPressed: () {},
-            child: const Text("Why to wait!", style: TextStyle(fontSize: 20),),
-          ),
         ),
         image: Center(
           child: Image.asset('assets/images/wash_hands.png'),
@@ -65,22 +43,12 @@ class OnBoardingPage extends StatelessWidget {
         )
     ),
     PageViewModel(
-        title: 'Here We Start!',
-        body: 'Here you can have whatever description you would like to have, you can type it all in here',
+        title: 'Keep Social Distance',
+        body: 'Keep physical distance of at least 1 metre from others, even if they don’t appear to be sick. Avoid crowds and close contact',
         footer: SizedBox(
           height: 45,
           width: 300,
-          child: ElevatedButton(
-            style: ElevatedButton.styleFrom(
-                primary: Colors.red,
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(20)
-                ),
-                elevation: 8
-            ),
-            onPressed: () {},
-            child: const Text("Let's Start", style: TextStyle(fontSize: 20)),
-          ),
+
         ),
         image: Center(
           child: Image.asset('assets/images/social_distance.jpg'),
@@ -104,16 +72,16 @@ class OnBoardingPage extends StatelessWidget {
             pages: pages,
             dotsDecorator: const DotsDecorator(
               size: Size(15,15),
-              color: Colors.blue,
+              color: Color(0xFF9bd7d5),
               activeSize: Size.square(20),
-              activeColor: Colors.red,
+              activeColor: Colors.blue,
             ),
             showDoneButton: true,
-            done: const Text('Done', style: TextStyle(fontSize: 20),),
+            done: const Text('Done', style: TextStyle(fontSize: 20,color: Color(0xFF9bd7d5),),),
             showSkipButton: true,
-            skip: const Text('Skip', style: TextStyle(fontSize: 20),),
+            skip: const Text('Skip', style: TextStyle(fontSize: 20, color: Color(0xFF9bd7d5),),),
             showNextButton: true,
-            next: const Icon(Icons.arrow_forward, size: 25,),
+            next: const Icon(Icons.arrow_forward, size: 25, color: Color(0xFF9bd7d5),),
             onDone: () => onDone(context),
             curve: Curves.bounceOut,
           ),

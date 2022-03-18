@@ -1,6 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:pashe_achi/Pages/doctor_consultancy_screen.dart';
+import 'package:pashe_achi/Pages/doctor_info_page.dart';
 import 'package:pashe_achi/Pages/onboarding_screen.dart';
 import 'package:pashe_achi/Pages/pharmacy_order.dart';
 import 'package:pashe_achi/Pages/splashe_screen.dart';
@@ -36,7 +37,7 @@ class PasheAchiApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData.light(),
-      home: DoctorConsultancyPage(),
+      home: DoctorInfoPage(),
     );
   }
 }

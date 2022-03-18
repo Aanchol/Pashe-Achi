@@ -13,7 +13,7 @@ class ProductCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.symmetric(vertical: 10),
-      margin: EdgeInsets.only(bottom: 15),
+      margin: EdgeInsets.all(15),
       width: MediaQuery.of(context).size.width,
       decoration: BoxDecoration(
         color: Color(0xFFB71C1C),

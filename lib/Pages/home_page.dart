@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:pashe_achi/Pages/doctor_consultancy_screen.dart';
 import 'package:pashe_achi/Pages/pharmacy_order.dart';
 import 'package:pashe_achi/Pages/statictics.dart';
 import 'package:pashe_achi/common_widget/homepage_container.dart';
@@ -34,9 +35,10 @@ class _HomePageState extends State<HomePage> {
                     child: Container(
                   height: 250,
                   decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius:
-                          BorderRadius.vertical(bottom: Radius.circular(30),),
+                    color: Colors.white,
+                    borderRadius: BorderRadius.vertical(
+                      bottom: Radius.circular(30),
+                    ),
                     boxShadow: [
                       BoxShadow(color: Colors.grey, blurRadius: 12.0),
                     ],
@@ -59,7 +61,9 @@ class _HomePageState extends State<HomePage> {
                       SizedBox(
                         height: 20,
                       ),
-                      SearchField(searchIcon: Icons.search,),
+                      SearchField(
+                        searchIcon: Icons.search,
+                      ),
                     ],
                   ),
                 )),
@@ -79,13 +83,20 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
                 Expanded(
-                  child: HomePageContainer(
-                    color: homepgContainColor,
-                    homepgContainerChild: HomepgIconContent(
-                      icon: FontAwesomeIcons.stethoscope,
-                      homepgLabel: "Consultation",
-                    ),
-                  ),
+                  child: InkWell(
+                      child: HomePageContainer(
+                        color: homepgContainColor,
+                        homepgContainerChild: HomepgIconContent(
+                          icon: FontAwesomeIcons.stethoscope,
+                          homepgLabel: "Consultation",
+                        ),
+                      ),
+                      onTap: () {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) {
+                          return DoctorConsultancyPage();
+                        }));
+                      }),
                 ),
               ],
             ),
@@ -102,8 +113,9 @@ class _HomePageState extends State<HomePage> {
                         homepgLabel: "Pharmacy Order",
                       ),
                     ),
-                    onTap: (){
-                      Navigator.push(context, MaterialPageRoute(builder: (context){
+                    onTap: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) {
                         return PharmacyPage();
                       }));
                     },
@@ -118,8 +130,9 @@ class _HomePageState extends State<HomePage> {
                         homepgLabel: "Statictics",
                       ),
                     ),
-                    onTap: (){
-                      Navigator.push(context, MaterialPageRoute(builder: (context){
+                    onTap: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) {
                         return Statictics();
                       }));
                     },
@@ -133,7 +146,3 @@ class _HomePageState extends State<HomePage> {
     );
   }
 }
-
-
-
-
