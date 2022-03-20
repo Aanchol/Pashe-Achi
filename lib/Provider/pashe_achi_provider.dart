@@ -8,10 +8,17 @@ import 'package:pashe_achi/repository/pashe_achi_repository.dart';
 class PasheAchiProvider with ChangeNotifier{
    bool _showSpinner= false;
    CovidInfo? _covidInfo;
+   List<Product> _addToCartList = [];
 
 
+   List<Product> get addToCartList => _addToCartList;
 
-   String? _status ="loading";
+  set addToCartList(List<Product> value) {
+    _addToCartList = value;
+    notifyListeners();
+  }
+
+  String? _status ="loading";
    final ProductList? _productList = ProductList();
 
 
@@ -28,6 +35,8 @@ class PasheAchiProvider with ChangeNotifier{
         return status;
 
      }
+
+
 
 
    CovidInfo get covidInfo => _covidInfo!;

@@ -4,7 +4,7 @@ import 'package:pashe_achi/Pages/welcome_screen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class OnBoardingPage extends StatelessWidget {
-   OnBoardingPage({Key? key}) : super(key: key);
+  OnBoardingPage({Key? key}) : super(key: key);
 
 
   final List<PageViewModel> pages = [
@@ -16,7 +16,7 @@ class OnBoardingPage extends StatelessWidget {
           width: 300,
         ),
         image: Center(
-          child:  Image.asset('assets/images/wear_mask.png'),
+          child: Image.asset('assets/images/wear_mask.png'),
         ),
         decoration: const PageDecoration(
             titleTextStyle: TextStyle(
@@ -30,7 +30,7 @@ class OnBoardingPage extends StatelessWidget {
         body: 'Clean your hands frequently with alcohol-based hand rub or soap and water',
         footer: SizedBox(
           height: 45,
-          width: 300,
+          width: 00,
         ),
         image: Center(
           child: Image.asset('assets/images/wash_hands.png'),
@@ -48,7 +48,6 @@ class OnBoardingPage extends StatelessWidget {
         footer: SizedBox(
           height: 45,
           width: 300,
-
         ),
         image: Center(
           child: Image.asset('assets/images/social_distance.jpg'),
@@ -71,19 +70,22 @@ class OnBoardingPage extends StatelessWidget {
           child: IntroductionScreen(
             pages: pages,
             dotsDecorator: const DotsDecorator(
-              size: Size(15,15),
+              size: Size(15, 15),
               color: Color(0xFF9bd7d5),
               activeSize: Size.square(20),
               activeColor: Colors.blue,
             ),
             showDoneButton: true,
-            done: const Text('Done', style: TextStyle(fontSize: 20,color: Color(0xFF9bd7d5),),),
+            done: Text('Done',
+              style: TextStyle(fontSize: 20, color: Color(0xFF9bd7d5),),),
             showSkipButton: true,
-            skip: const Text('Skip', style: TextStyle(fontSize: 20, color: Color(0xFF9bd7d5),),),
+            skip: Text('Skip',
+              style: TextStyle(fontSize: 20, color: Color(0xFF9bd7d5),),),
             showNextButton: true,
-            next: const Icon(Icons.arrow_forward, size: 25, color: Color(0xFF9bd7d5),),
+            next: Icon(
+              Icons.arrow_forward, size: 25, color: Color(0xFF9bd7d5),),
             onDone: () => onDone(context),
-            curve: Curves.bounceOut,
+            //curve: Curves.bounceOut,
           ),
         ),
       ),
@@ -97,57 +99,5 @@ class OnBoardingPage extends StatelessWidget {
         context,
         MaterialPageRoute(builder: (context) => const WelcomeScreen()));
   }
+}
 
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       backgroundColor: Colors.white,
-//       body: SafeArea(
-//         child: SingleChildScrollView(
-//           child: Container(
-//             width: double.infinity,
-//             height: MediaQuery.of(context).size.height,
-//             padding: EdgeInsets.symmetric(horizontal: 30, vertical: 130),
-//             child: Column(
-//               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-//               crossAxisAlignment: CrossAxisAlignment.center,
-//               children: [
-//                 Container(
-//                   height: MediaQuery.of(context).size.height / 3,
-//                   decoration: BoxDecoration(
-//                     image: DecorationImage(
-//                         image: AssetImage('assets/images/wear_mask.png')),
-//                   ),
-//                 ),
-//                 Column(
-//                   children: [
-//                     Text(
-//                       "Wear a mask",
-//                       style: TextStyle(
-//                         fontWeight: FontWeight.bold,
-//                         fontSize: 30,
-//                       ),
-//                     ),
-//                     SizedBox(
-//                       height: 20,
-//                     ),
-//                     Text(
-//                       "Automatic identity verification which enables you to verify your identity",
-//                       textAlign: TextAlign.center,
-//                       style: TextStyle(
-//                         color: Colors.grey[700],
-//                         fontSize: 15,
-//                       ),
-//                     ),
-//
-//
-//                   ],
-//                 )
-//               ],
-//             ),
-//           ),
-//         ),
-//       ),
-//     );
-//   }
-  }

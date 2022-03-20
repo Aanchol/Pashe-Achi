@@ -37,7 +37,7 @@ class PasheAchiApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData.light(),
-      home: DoctorInfoPage(),
+      home: PharmacyPage(),
     );
   }
 }

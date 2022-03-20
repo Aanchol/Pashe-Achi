@@ -17,5 +17,6 @@ class ProductList{
         "Molnupiravir is an antiviral medicine used to treat mild to moderate C0VID-19 (caused by SARS-CoV-2) in adults who are at risk for developing severe illness",
         'assets/images/Molvir_Capsule.png', 500),
   ];
+
 }
 

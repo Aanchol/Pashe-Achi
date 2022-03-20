@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pashe_achi/Pages/doctor_info_page.dart';
 
 class DoctorConsultancyPage extends StatefulWidget {
   const DoctorConsultancyPage({Key? key}) : super(key: key);
@@ -198,7 +199,10 @@ class _DoctorConsultancyPageState extends State<DoctorConsultancyPage> {
   }
   void openDocInfo()
   {
-    Navigator.pushNamed(context, '/DocInfoPage');
+    Navigator.push(context,
+        MaterialPageRoute(builder: (context) {
+          return DoctorInfoPage();
+        }));
   }
 }
 
