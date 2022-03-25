@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:pashe_achi/Pages/doctor_consultancy_screen.dart';
+import 'package:pashe_achi/Pages/drawer_page.dart';
 import 'package:pashe_achi/Pages/pharmacy_order.dart';
 import 'package:pashe_achi/Pages/statictics.dart';
 import 'package:pashe_achi/common_widget/homepage_container.dart';
@@ -20,10 +21,10 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.grey.shade100,
+      drawer: DrawerPage(),
       appBar: AppBar(
-        title: Text('Home'),
+        title: Text('Pashe Achi'),
         centerTitle: true,
-        leading: Icon(Icons.menu_outlined),
         backgroundColor: Colors.red.shade900,
       ),
       body: Column(
@@ -35,7 +36,7 @@ class _HomePageState extends State<HomePage> {
                     child: Container(
                   height: 250,
                   decoration: BoxDecoration(
-                    color: Colors.white,
+                    color: kSecondarycolor,
                     borderRadius: BorderRadius.vertical(
                       bottom: Radius.circular(30),
                     ),
@@ -43,29 +44,13 @@ class _HomePageState extends State<HomePage> {
                       BoxShadow(color: Colors.grey, blurRadius: 12.0),
                     ],
                   ),
-                  padding: EdgeInsets.all(20.0),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        'Hi!',
-                        style: TextStyle(color: Colors.black87, fontSize: 25),
+                  padding: EdgeInsets.all(30.0),
+
+                   child: Container(
+                        child: Image.asset("assets/images/homepage.jpg"),
                       ),
-                      SizedBox(
-                        height: 3,
-                      ),
-                      Text(
-                        'What are you looking for?',
-                        style: TextStyle(color: Colors.black87, fontSize: 35),
-                      ),
-                      SizedBox(
-                        height: 20,
-                      ),
-                      SearchField(
-                        searchIcon: Icons.search,
-                      ),
-                    ],
-                  ),
+
+
                 )),
               ],
             ),
@@ -75,7 +60,7 @@ class _HomePageState extends State<HomePage> {
               children: [
                 Expanded(
                   child: HomePageContainer(
-                    color: homepgContainColor,
+                    color: kPrimarycolor,
                     homepgContainerChild: HomepgIconContent(
                       icon: FontAwesomeIcons.syringe,
                       homepgLabel: "Book Test",
@@ -85,7 +70,7 @@ class _HomePageState extends State<HomePage> {
                 Expanded(
                   child: InkWell(
                       child: HomePageContainer(
-                        color: homepgContainColor,
+                        color: kPrimarycolor,
                         homepgContainerChild: HomepgIconContent(
                           icon: FontAwesomeIcons.stethoscope,
                           homepgLabel: "Consultation",
@@ -107,7 +92,7 @@ class _HomePageState extends State<HomePage> {
                 Expanded(
                   child: InkWell(
                     child: HomePageContainer(
-                      color: homepgContainColor,
+                      color: kPrimarycolor,
                       homepgContainerChild: HomepgIconContent(
                         icon: FontAwesomeIcons.capsules,
                         homepgLabel: "Pharmacy Order",
@@ -124,7 +109,7 @@ class _HomePageState extends State<HomePage> {
                 Expanded(
                   child: InkWell(
                     child: HomePageContainer(
-                      color: homepgContainColor,
+                      color: kPrimarycolor,
                       homepgContainerChild: HomepgIconContent(
                         icon: FontAwesomeIcons.chartBar,
                         homepgLabel: "Statictics",

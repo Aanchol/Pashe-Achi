@@ -102,7 +102,7 @@ class _DoctorConsultancyPageState extends State<DoctorConsultancyPage> {
                           physics: BouncingScrollPhysics(),
                           child: Column(
                             children: [
-                              createDocWidget("female_doctor1.png", "Susan Thomas"),
+                              createDocWidget("female_doctor1.png", "Rokeya Sultana"),
                               createDocWidget("male_doctor1.png", "Paul Barbara"),
                               createDocWidget("female_doctor2.png", "Nancy Williams"),
                               createDocWidget("male_doctor2.png", "Susan Thomas"),
@@ -193,16 +193,14 @@ class _DoctorConsultancyPageState extends State<DoctorConsultancyPage> {
             ),
           ),
         ),
-        onTap: openDocInfo,
+        onTap: (){
+          Navigator.push(context,
+              MaterialPageRoute(builder: (context) {
+                return DoctorInfoPage();
+              }));
+        },
       ),
     );
-  }
-  void openDocInfo()
-  {
-    Navigator.push(context,
-        MaterialPageRoute(builder: (context) {
-          return DoctorInfoPage();
-        }));
   }
 }
 

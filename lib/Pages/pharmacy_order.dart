@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:pashe_achi/Pages/add_to_cart_page.dart';
 import 'package:pashe_achi/Provider/pashe_achi_provider.dart';
 import 'package:pashe_achi/common_widget/product_card.dart';
 import 'package:provider/provider.dart';
@@ -35,11 +36,21 @@ class _PharmacyPageState extends State<PharmacyPage> {
           actions: [
             Center(
               child: Badge(
-                badgeContent: Text('0',style: TextStyle(color: Colors.white),),
-                badgeColor: Colors.pinkAccent,
-                child: Icon(
-                  FontAwesomeIcons.cartPlus,
+                badgeContent: Text(
+                  '0',
+                  style: TextStyle(color: Colors.white),
                 ),
+                badgeColor: Colors.pinkAccent,
+                child: InkWell(
+                    child: Icon(
+                      FontAwesomeIcons.cartPlus,
+                    ),
+                    onTap: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) {
+                        return AddToCartPage();
+                      }));
+                    }),
               ),
             ),
             SizedBox(width: 20),
@@ -76,7 +87,8 @@ class _PharmacyPageState extends State<PharmacyPage> {
                             height: MediaQuery.of(context).size.height / 5,
                             decoration: BoxDecoration(
                               image: DecorationImage(
-                                  image: AssetImage('assets/images/pharmacy_order.png')),
+                                  image: AssetImage(
+                                      'assets/images/pharmacy_order.png')),
                             ),
                           ),
                           SizedBox(
@@ -90,7 +102,6 @@ class _PharmacyPageState extends State<PharmacyPage> {
                                 primary: Color(0xFF9bd7d5),
                                 padding: EdgeInsets.symmetric(
                                     horizontal: 15, vertical: 22),
-
                               ),
                               child: Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
@@ -118,14 +129,6 @@ class _PharmacyPageState extends State<PharmacyPage> {
                 ],
               ),
             ),
-            //SizedBox(height: 15),
-            // Text(
-            //   "Today's deals",
-            //   style: TextStyle(
-            //     color:  Color(0xFFEFE7DA),
-            //     fontSize: 20,
-            //   ),
-            // ),
             SizedBox(height: 15),
             Expanded(
               child: ListView.builder(

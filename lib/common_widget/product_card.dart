@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:pashe_achi/Pages/add_to_cart_page.dart';
 import 'package:pashe_achi/Provider/pashe_achi_provider.dart';
+import 'package:pashe_achi/utils/constants.dart';
 import 'package:provider/provider.dart';
 
 import '../models/product.dart';
@@ -73,10 +75,23 @@ class ProductCard extends StatelessWidget {
                       ],
                     ),
                     InkWell(
-
-
                       onTap: (){
-                        provider.addToCartList.add(product!);
+                        provider.addToCartList.contains(product)?
+                        Container(
+                          height: 35,
+                          width: 100,
+                          decoration: BoxDecoration(
+                            color: Color(0xFF9bd7d5),
+                            borderRadius: BorderRadius.circular(8),
+                          ),
+                          child: Center(
+                            child: Text("Added",
+                              style: TextStyle(color: Colors.black,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ),
+                        ): provider.addToCartList.add(product!);
                         Navigator.push(context,
                             MaterialPageRoute(builder: (context) {
                               return AddToCartPage();

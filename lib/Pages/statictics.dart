@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:pashe_achi/Provider/pashe_achi_provider.dart';
+import 'package:pashe_achi/utils/constants.dart';
 import 'package:provider/provider.dart';
 
 class Statictics extends StatefulWidget {
@@ -30,7 +31,7 @@ class _StaticticsState extends State<Statictics> {
         backgroundColor: Colors.grey.shade100,
         appBar: AppBar(
           //elevation: 0,
-          backgroundColor: Colors.red.shade900,
+          backgroundColor: kPrimarycolor,
           title: Text("Statictics"),
           centerTitle: true,
           leading: IconButton(
